@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = "secretkey"  # for session memory
 
 # Configure Gemini API
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAlsLs1LvGQdAC3hQOsZfL4hcE2hrw8fNM"
+os.environ["GOOGLE_API_KEY"] = "put your own gemini API"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 
@@ -33,3 +33,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
